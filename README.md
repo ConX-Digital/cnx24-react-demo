@@ -1,8 +1,33 @@
-# Getting Started with Create React App
+# Connections '24 React on CloudPages Demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## How to Deploy the Project on Marketing Cloud
+
+1. Create a Data Extension with these specifications:
+
+   **Name:** Survey_Results
+
+   **External Key:** Survey_Results
+   
+   | Field Name     | Data Type | Length       | Default Value |
+   |----------------|-----------|--------------|---------------|
+   | SurveyID       | Number    |              |               |
+   | SubmissionDate | Date      |              | Current Date  |
+   | Response       | Text      | VARCHAR(MAX) |               |
+
+2. Update the .env file with your Code Resource Server URL
+3. Open a terminal in your project directory and run `npm run build`.
+4. Create the following assets on Marketing Cloud and populate them with the respective files:
+   * **CSS Code Resource:** `build\static\main.*.css`
+   * **JavaScript Code Resource:** `build\static\main.*.js`
+   * **Landing Page:** `build\index.html`
+     * Edit the paths of the CSS and JavaScript files to reflect the Code Resource URLs.
+   * **JSON Code Resource:** `Server\app.js`
+       * Edit the paths of the CSS and JavaScript files to reflect the Code Resource URLs.
+
 
 ## Available Scripts
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 In the project directory, you can run:
 
