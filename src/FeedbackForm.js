@@ -124,8 +124,8 @@ const surveyJson = {
   "showProgressBar": "bottom",
   "widthMode": "responsive"
  };
- 
- const codeResourceUrl = "https://mcx1tnv7fcf44mqd4yq183z2hjy4.pub.sfmc-content.com/3kxkmtknn1c";
+
+ const codeResourceUrl = process.env.CodeResourceServerURL;
 
 /* Define the FeedbackForm component */
 function FeedbackForm() {
