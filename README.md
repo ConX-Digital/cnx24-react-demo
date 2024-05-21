@@ -1,31 +1,65 @@
 # Connections '24 React on CloudPages Demo
 
+### Slides
+
+The slides for the presentation are available in the repository under the `slides` folder.
+
+### Need Help?
+
+If you encounter any issues, you can log an issue on the repository or reach out via [LinkedIn](https://www.linkedin.com/in/stijnhoste/). We will do our best to assist you.
+
 ## How to Deploy the Project on Marketing Cloud
 
-1. Create a Data Extension with these specifications:
+### Step 1: Create the Data Extension
 
-   **Name:** Survey_Results
+Create a Data Extension with the following specifications:
 
-   **External Key:** Survey_Results
+**Name:** Survey_Results
+
+**External Key:** Survey_Results
+
+| Field Name     | Data Type | Length       | Default Value |
+|----------------|-----------|--------------|---------------|
+| SurveyID       | Number    |              |               |
+| SubmissionDate | Date      |              | Current Date  |
+| Response       | Text      | VARCHAR(MAX) |               |
+
+### Step 2: Set Up the Server
+
+1. Create a new Code Resource for JSON.
+2. Copy the contents from `Server\app.js` and paste them into the JSON Code Resource.
+
+### Step 3: Update the Environment Configuration
+
+1. Open the `.env` file in your project directory.
+2. Update the file with your Code Resource Server URL.
+
+### Step 4: Build the Project
+
+1. Open a terminal in your project directory.
+2. Run the following command to build the project:
+
+   ```bash
+   npm run build
+   ```
+### Step 5: Create Marketing Cloud Assets
+
+Create the following assets on Marketing Cloud and populate them with the respective files:
+
+1. **CSS Code Resource:**
+   - Use the file located at `build\static\main.*.css`.
    
-   | Field Name     | Data Type | Length       | Default Value |
-   |----------------|-----------|--------------|---------------|
-   | SurveyID       | Number    |              |               |
-   | SubmissionDate | Date      |              | Current Date  |
-   | Response       | Text      | VARCHAR(MAX) |               |
+2. **JavaScript Code Resource:**
+   - Use the file located at `build\static\main.*.js`.
 
-2. Update the .env file with your Code Resource Server URL
-3. Open a terminal in your project directory and run `npm run build`.
-4. Create the following assets on Marketing Cloud and populate them with the respective files:
-   * **CSS Code Resource:** `build\static\main.*.css`
-   * **JavaScript Code Resource:** `build\static\main.*.js`
-   * **Landing Page:** `build\index.html`
-     * Edit the paths of the CSS and JavaScript files to reflect the Code Resource URLs.
-   * **JSON Code Resource:** `Server\app.js`
-       * Edit the paths of the CSS and JavaScript files to reflect the Code Resource URLs.
+3. **Landing Page:**
+   - Use the file located at `build\index.html`.
+   - Edit the paths of the CSS and JavaScript files to reflect the Code Resource URLs.
 
 
-## Available Scripts
+
+
+## Available Create React App Scripts
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
