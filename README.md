@@ -37,8 +37,11 @@ Create a Data Extension with the following specifications:
 ### Step 4: Build the Project
 
 1. Open a terminal in your project directory.
-2. Run the following command to build the project:
-
+2. Install the dependencies:
+   ```bash
+   npm install
+   ```
+4. Run the following command to build the project:
    ```bash
    npm run build
    ```
