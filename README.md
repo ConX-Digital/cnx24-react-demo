@@ -1,4 +1,4 @@
-# Connections '24 React on CloudPages Demo
+# Dubai Dreamin' '24 React on CloudPages Demo
 
 ### Slides
 
